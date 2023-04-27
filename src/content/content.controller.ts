@@ -7,11 +7,11 @@ import {
     ParseIntPipe,
     Post,
     Put,
-  } from '@nestjs/common';
+} from '@nestjs/common';
 import { ContentService } from './content.service';
 import { ContentDto } from './dto/content.dto';
   
-  @Controller('content')
+  @Controller('contents')
   export class ContentController {
     constructor(private contentService: ContentService) {}
   

@@ -5,9 +5,7 @@ export class Content {
     @PrimaryGeneratedColumn()
     id?: number;
 
-    @Column({
-        unique: true
-    })
+    @Column()
     title?: string;
 
     @Column() 
