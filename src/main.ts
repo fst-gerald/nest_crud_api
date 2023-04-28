@@ -8,6 +8,6 @@ async function bootstrap() {
   // for dto validations
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
 
-  await app.listen(8000);
+  await app.listen(80);
 }
 bootstrap()

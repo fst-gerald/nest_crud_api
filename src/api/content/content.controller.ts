@@ -11,7 +11,7 @@ import {
 import { ContentService } from './content.service';
 import { ContentDto } from './dto/content.dto';
   
-  @Controller('contents')
+  @Controller('api/contents')
   export class ContentController {
     constructor(private contentService: ContentService) {}
   

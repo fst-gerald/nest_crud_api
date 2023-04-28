@@ -3,12 +3,12 @@ import { AuthService } from './auth.service';
 import { AuthLoginDto } from './dto/auth-login.dto';
 import { Guest } from './decorators/guest.decorator';
 
-@Controller('auth')
+@Controller('api/auth')
 export class AuthController {
     constructor(private authService: AuthService) {}
 
     @Guest()
-    @Post('/login')
+    @Post('/token')
     login(@Body() loginDto: AuthLoginDto) {
       return this.authService.logIn(loginDto.email, loginDto.password);
     }
