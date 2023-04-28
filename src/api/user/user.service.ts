@@ -7,7 +7,7 @@ import { Repository } from 'typeorm';
 export class UserService {
     constructor(@InjectRepository(User) private userRepository: Repository<User>) { }
 
-      async findBy(params: Object) {
-        return await this.userRepository.findOneBy(params);
-      }
+    async findBy(params: Object) {
+      return await this.userRepository.findOneBy(params);
+    }
 }

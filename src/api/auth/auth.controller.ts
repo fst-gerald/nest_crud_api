@@ -8,8 +8,13 @@ export class AuthController {
     constructor(private authService: AuthService) {}
 
     @Guest()
-    @Post('/token')
+    @Post('/token') // login
     login(@Body() loginDto: AuthLoginDto) {
-      return this.authService.logIn(loginDto.email, loginDto.password);
+      return this.authService.logIn(loginDto);
+    }
+
+    @Post('/logout')
+    logout() {
+      // TODO: maybe need to ne implement using session?
     }
 }

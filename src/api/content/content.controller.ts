@@ -27,16 +27,15 @@ import { ContentDto } from './dto/content.dto';
   
     @Post()
     store(@Body() contentDto: ContentDto) {
-      console.log(contentDto);
       return this.contentService.create(contentDto);
     }
   
     @Put('/:contentId')
     update(
-      @Body() body: ContentDto,
+      @Body() contentDto: ContentDto,
       @Param('contentId', ParseIntPipe) contentId: number,
     ) {
-      return this.contentService.update(body, contentId);
+      return this.contentService.update(contentDto, contentId);
     }
   
     @Delete('/:contentId')
